@@ -1,4 +1,6 @@
 <script>
+    import Button from "../../components/Button.svelte";
+
     let count = 0
     const addTodo= () => count += 1
 </script>
@@ -14,7 +16,7 @@
 
 <div class="todo">
     <span>sample todo</span>
-    <button>del</button>
+    <Button>del</Button>
 </div>
 
 <div>
