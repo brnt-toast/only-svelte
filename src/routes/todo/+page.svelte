@@ -1,8 +1,7 @@
 <script>
     let count = 0
-    const yup = () => count += 1
+    const addTodo= () => count += 1
 </script>
-
 
 
 
@@ -10,7 +9,7 @@
 
 <form >
     <input type="text" placeholder="add todo">
-    <button on:click={yup} type="submit">+</button>
+    <button on:click={addTodo} type="submit">+</button>
 </form>
 
 <div class="todo">
