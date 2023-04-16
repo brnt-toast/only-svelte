@@ -1,15 +1,20 @@
 <script>
     import Button from "../../components/Button.svelte";
+    import Todo from "./Todo.svelte";
 
     let count = 0
-    const addTodo= () => count += 1
+
+
+    const addTodo = () => count += 1
+    const clicked = () => console.log('clicked')
 </script>
 
 
 
 <h1>Todo App</h1>
 
-<form >
+
+<form>
     <input 
         id="todo_input" 
         name='todo_input' 
@@ -22,10 +27,21 @@
     </Button>
 </form>
 
-<div class="todo">
-    <span>sample todo</span>
-    <Button>del</Button>
-</div>
+<ul id="todo_list">
+    <li>
+        <Todo />
+    </li>
+    <li>
+        <Todo />
+    </li>
+    <li>
+        <Todo />
+    </li>
+</ul>
+
+<Todo on:click={clicked}/>
+<Todo on:click={clicked}/>
+<Todo on:click={clicked}/>
 
 <div>
     <p>{`there are ${count} pending tasks`}</p>
@@ -34,11 +50,7 @@
 
 
 <style>
-    .todo {
-        background-color: lightgray;
-    }
     input {
         font-size: inherit;
     }
-    
 </style>
