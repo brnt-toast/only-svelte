@@ -10,8 +10,16 @@
 <h1>Todo App</h1>
 
 <form >
-    <input type="text" placeholder="add todo">
-    <button on:click={addTodo} type="submit">+</button>
+    <input 
+        id="todo_input" 
+        name='todo_input' 
+        type="text" 
+        placeholder="add todo">
+    <Button 
+        on:click={addTodo} 
+        type="submit">
+        +
+    </Button>
 </form>
 
 <div class="todo">
@@ -29,4 +37,8 @@
     .todo {
         background-color: lightgray;
     }
+    input {
+        font-size: inherit;
+    }
+    
 </style>
